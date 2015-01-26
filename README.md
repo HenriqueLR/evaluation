@@ -2,12 +2,9 @@
 
 * single application to evaluate candidates programmer job.
 
-___
-
 # install
 
 * pip install -r requirements.txt
-___
 
 # details
 
