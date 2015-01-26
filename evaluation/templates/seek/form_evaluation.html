@@ -1,0 +1,205 @@
+<form role="form" action='' method='POST' class='form-horizontal'>
+  {% csrf_token %}
+
+    <div class="form-group">
+
+        <div class='row'>
+            <label for="{{ form.first_name.first_name }}" class="col-sm-1 control-label">
+                {{ form.first_name.label }}
+            </label>
+            <div class="col-sm-3">
+                {{ form.first_name }}
+                {% for error in form.first_name.errors %}
+                    <small class="text-danger">{{ error }}</small>
+                {% endfor %}
+            </div>
+
+            <label for="{{ form.last_name.last_name }}" class="col-sm-1 control-label">
+                {{ form.last_name.label }}
+            </label>
+            <div class="col-sm-3">
+                {{ form.last_name }}
+                {% for error in form.last_name.errors %}
+                    <small class="text-danger">{{ error }}</small>
+                {% endfor %}
+            </div>
+
+            <label for="{{ form.birth_date.birth_date }}" class="col-sm-1 control-label">
+                {{ form.birth_date.label }}
+            </label>
+            <div class="col-sm-2">
+                {{ form.birth_date }}
+                {% for error in form.birth_date.errors %}
+                    <small class="text-danger">{{ error }}</small>
+                {% endfor %}
+            </div>
+        </div><!--row-->
+
+        <div class='row'>
+            <label for="{{ form.email.email }}" class="col-sm-1 control-label">
+                {{ form.email.label }}
+            </label>
+            <div class="col-sm-4">
+                {{ form.email }}
+                {% for error in form.email.errors %}
+                    <small class="text-danger">{{ error }}</small>
+                {% endfor %}
+            </div>
+
+            <label for="{{ form.phone.phone }}" class="col-sm-1 control-label">
+                {{ form.phone.label }}
+            </label>
+            <div class="col-sm-2">
+                {{ form.phone }}
+                {% for error in form.phone.errors %}
+                    <small class="text-danger">{{ error }}</small>
+                {% endfor %}
+            </div>
+
+            <label for="{{ form.mobile_phone.mobile_phone }}" class="col-sm-1 control-label">
+                {{ form.mobile_phone.label }}
+            </label>
+            <div class="col-sm-2">
+                {{ form.mobile_phone }}
+                {% for error in form.mobile_phone.errors %}
+                    <small class="text-danger">{{ error }}</small>
+                {% endfor %}
+            </div>
+        </div><!--row-->
+
+        <div class='row'>
+            <label for="{{ form.state.state }}" class="col-sm-1 control-label">
+                {{ form.state.label }}
+            </label>
+            <div class="col-sm-2">
+                {{ form.state }}
+                {% for error in form.state.errors %}
+                    <small class="text-danger">{{ error }}</small>
+                {% endfor %}
+            </div>
+
+            <label for="{{ form.city.city }}" class="col-sm-1 control-label">
+                {{ form.city.label }}
+            </label>
+            <div class="col-sm-2">
+                {{ form.city }}
+                {% for error in form.city.errors %}
+                    <small class="text-danger">{{ error }}</small>
+                {% endfor %}
+            </div>
+
+            <label for="{{ form.description_person.description_person }}" class="col-sm-1 control-label">
+                {{ form.description_person.label }}
+            </label>
+            <div class="col-sm-4">
+                {{ form.description_person }}
+                {% for error in form.description_person.errors %}
+                    <small class="text-danger">{{ error }}</small>
+                {% endfor %}
+            </div>
+        </div><!--row-->
+
+        <hr>
+
+        <h3>Avalie suas habilidades:</h3>
+
+        <div class='row'>
+            <label for="{{ form.html.html }}" class="col-sm-2 control-label">
+                {{ form.html.label }}
+            </label>
+            <div class="col-sm-1">
+                {{ form.html }}
+                {% for error in form.html.errors %}
+                    <small class="text-danger">{{ error }}</small>
+                {% endfor %}
+            </div>
+
+            <label for="{{ form.python.python }}" class="col-sm-1 control-label">
+                {{ form.python.label }}
+            </label>
+            <div class="col-sm-1">
+                {{ form.python }}
+                {% for error in form.python.errors %}
+                    <small class="text-danger">{{ error }}</small>
+                {% endfor %}
+            </div>
+
+            <label for="{{ form.css.css }}" class="col-sm-1 control-label">
+                {{ form.css.label }}
+            </label>
+            <div class="col-sm-1">
+                {{ form.css }}
+                {% for error in form.css.errors %}
+                    <small class="text-danger">{{ error }}</small>
+                {% endfor %}
+            </div>
+
+            <label for="{{ form.android.android }}" class="col-sm-1 control-label">
+                {{ form.android.label }}
+            </label>
+            <div class="col-sm-1">
+                {{ form.android }}
+                {% for error in form.android.errors %}
+                    <small class="text-danger">{{ error }}</small>
+                {% endfor %}
+            </div>
+
+            <label for="{{ form.django.django }}" class="col-sm-1 control-label">
+                {{ form.django.label }}
+            </label>
+            <div class="col-sm-1">
+                {{ form.django }}
+                {% for error in form.django.errors %}
+                    <small class="text-danger">{{ error }}</small>
+                {% endfor %}
+            </div>
+          </div><!--row-->
+
+          <div class='row'>
+            <label for="{{ form.js.js }}" class="col-sm-2 control-label">
+                {{ form.js.label }}
+            </label>
+            <div class="col-sm-1">
+                {{ form.js }}
+                {% for error in form.js.errors %}
+                    <small class="text-danger">{{ error }}</small>
+                {% endfor %}
+            </div>
+
+            <label for="{{ form.ios.ios }}" class="col-sm-1 control-label">
+                {{ form.ios.label }}
+            </label>
+            <div class="col-sm-1">
+                {{ form.ios }}
+                {% for error in form.ios.errors %}
+                    <small class="text-danger">{{ error }}</small>
+                {% endfor %}
+            </div>
+
+            <label for="{{ form.description_items.description_items }}" class="col-sm-1 control-label">
+                {{ form.description_items.label }}
+            </label>
+            <div class="col-sm-5">
+                {{ form.description_items }}
+                {% for error in form.description_items.errors %}
+                    <small class="text-danger">{{ error }}</small>
+                {% endfor %}
+            </div>
+        </div><!--row-->
+
+        <hr>
+
+        <div class='row'>
+            <div class="col-md-2 col-md-offset-3">
+                {{ form.send }}
+            </div>
+            <div class="col-md-2">
+                {{ form.reset }}
+            </div>
+            <div class="col-md-2">
+                <a class='btn btn-lg btn-success btn-block' type='button' name='back' id='back' href='/' />Voltar</a>
+            </div>
+        </div><!--row-->
+
+    </div><!--form-group-->
+</form>

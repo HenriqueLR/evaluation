@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    	<title>{% block title %}Evaluation{% endblock %}</title>
+
+    	<link href="{{ STATIC_URL }}css/bootstrap.min.css" rel="stylesheet">
+    	<link href="{{ STATIC_URL }}css/jumbotron.css" rel="stylesheet">
+    	<script src="{{ STATIC_URL }}js/ie-emulation-modes-warning.js"></script>
+
+    	{% block extrahead %}{% endblock %}
+  	</head>
+
+	<body>
+    	<div class="jumbotron">
+      		<div class="container">
+      			{% block header %}
+        		{% endblock %}
+      		</div>
+    	</div>
+        
+    	<div class="container">
+    		{% block container %}
+			{% endblock %}
+    	</div> <!-- /container -->
+
+    	<hr>
+
+      	<center>
+    		<footer>
+    			{% block footer %}
+    				<p>Meus Pedidos &copy; <img src='{{ STATIC_URL }}img/meuspedidos.png'></img></p>
+    			{% endblock %}
+    		</footer>
+    	</center>
+
+    	{% block extras %}
+    		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    		<script src="{{ STATIC_URL }}js/bootstrap.min.js"></script>
+    		<script src="{{ STATIC_URL }}js/ie10-viewport-bug-workaround.js"></script>
+    	{% endblock %}
+	</body>
+</html>
