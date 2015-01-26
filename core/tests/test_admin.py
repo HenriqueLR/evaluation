@@ -27,6 +27,3 @@ class AdminTest(LiveServerTestCase):
 
 	def tearDown(self):
 		self.browser.quit()
-
-
-

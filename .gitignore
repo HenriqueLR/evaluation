@@ -4,4 +4,4 @@
 *.sqlite
 *.tmp
 *.log
-evaluation/evaluation/settings_productions.py
+/evaluation/evaluation/settings_productions.py

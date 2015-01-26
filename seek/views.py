@@ -39,4 +39,3 @@ def detail_jobs(request, *args, **kwargs):
 
 	form = FormsPeopleEvaluation()
 	return render(request, 'seek/detail_jobs.html', {'form': form,'list_jobs':list_jobs})
-

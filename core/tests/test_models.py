@@ -146,7 +146,3 @@ class ManyToManyTest(TestCase):
         del self.item
         del self.job
         del self.people
-
-
-
-             

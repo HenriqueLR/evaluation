@@ -117,4 +117,3 @@ class People(models.Model):
 		verbose_name_plural=u'Peoples'
 		ordering=['id_people']
 		db_table='people'
-

@@ -13,22 +13,18 @@
 {% endblock %}
 
 {% block container %}
-<div class='row'>
-	<div class='container'>
+  <div class='row'>
+    <div class='container'>
+      <div id="messages">                                                       
+        {% for message in messages %}                                           
+          <div class="alert alert-{% if message.tags == 'error' %}danger{% elif message.tags == 'success' %}info{% endif %}">                            
+            <a class="close" data-dismiss="alert">&times;</a>                     
+            <strong>{{ message }}</strong>                                        
+          </div>                                                                  
+        {% endfor %}                                                            
+      </div> 
 
-		<div id="messages">                                                       
-      {% for message in messages %}                                           
-        <div class="alert alert-{% if message.tags == 'error' %}danger{% elif message.tags == 'success' %}info{% endif %}">                            
-          <a class="close" data-dismiss="alert">&times;</a>                     
-          <strong>{{ message }}</strong>                                        
-        </div>                                                                  
-      {% endfor %}                                                            
-    </div> 
-
-    {% include 'seek/form_evaluation.html' with form=form %}                                                         
-	
+      {% include 'seek/form_evaluation.html' with form=form %}                                                         
+    </div>
   </div>
-</div>
 {% endblock %}
-
-

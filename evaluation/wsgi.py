@@ -1,11 +1,9 @@
-"""
-WSGI config for evaluation project.
+#encoding: utf-8
 
-It exposes the WSGI callable as a module-level variable named ``application``.
-
-For more information on this file, see
-https://docs.djangoproject.com/en/1.7/howto/deployment/wsgi/
-"""
+'''
+More informations you can see documentation 
+of the project https://github.com/HenriqueLR/evaluation
+'''
 
 import os
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "evaluation.settings_productions")

@@ -138,4 +138,3 @@ EMAIL_HOST = 'server email'
 EMAIL_PORT = 25
 EMAIL_USE_TLS = False
 EMAIL_HOST_USER= 'user@example.com'
-

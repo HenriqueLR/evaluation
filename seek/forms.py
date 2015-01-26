@@ -35,8 +35,8 @@ class FormsPeopleEvaluation(forms.Form):
     	                    	                                 'type':'text'}))
 
   last_name = forms.CharField(error_messages={'required': 'Campo obrigatório.'}, 
-                               max_length=50, required = True, label='Sobrenome',
-                               widget=forms.TextInput(attrs={'placeholder': 'Sobrenome', 
+                              max_length=50, required = True, label='Sobrenome',
+                              widget=forms.TextInput(attrs={'placeholder': 'Sobrenome', 
                                                              'class':'form-control',
                                                              'id':'last_name',
                                                              'name':'last_name',
@@ -51,48 +51,48 @@ class FormsPeopleEvaluation(forms.Form):
                                                         'type':'text'}))
 
   state = forms.CharField(error_messages={'required': 'Campo obrigatório.'}, 
-                           required=True, label='Estado',
-                           widget=forms.Select(attrs={'class':'form-control', 
+                          required=True, label='Estado',
+                          widget=forms.Select(attrs={'class':'form-control', 
                                                       'name':'state', 'id':'state'}, 
                                                       choices=STATE_CHOICES))
 
   city = forms.CharField(error_messages={'required': 'Campo obrigatório.'}, 
-                            max_length=30, required = True, label='Cidade',
-                            widget=forms.TextInput(attrs={'placeholder': 'Cidade', 
+                          max_length=30, required = True, label='Cidade',
+                          widget=forms.TextInput(attrs={'placeholder': 'Cidade', 
                                                           'class':'form-control',
                                                           'id':'city',
                                                           'name':'city',
                                                           'type':'text'}))
 
   phone = brforms.BRPhoneNumberField(error_messages={'required': 'Campo obrigatório.'},
-                                        required=True, label='Telefone',
-                                        widget=forms.TextInput(attrs={'placeholder': 'ZZ-XXXX-XXXX', 
-                                                                  'class':'form-control',
-                                                                  'id':'phone',
-                                                                  'name':'phone',
-                                                                  'type':'text'}))  
+                                      required=True, label='Telefone',
+                                      widget=forms.TextInput(attrs={'placeholder': 'ZZ-XXXX-XXXX', 
+                                                                    'class':'form-control',
+                                                                    'id':'phone',
+                                                                    'name':'phone',
+                                                                    'type':'text'}))  
 
   mobile_phone = forms.CharField(error_messages={'required': 'Campo obrigatório.'},
-                            required=True, max_length=20, label='Celular',
-                            widget=forms.TextInput(attrs={'placeholder': 'ZZ-9XXXX-XXXX', 
-                                                          'class':'form-control',
-                                                          'id':'mobile_phone',
-                                                          'name':'mobile_phone',
-                                                          'type':'text'}))
+                                  required=True, max_length=20, label='Celular',
+                                  widget=forms.TextInput(attrs={'placeholder': 'ZZ-9XXXX-XXXX', 
+                                                                'class':'form-control',
+                                                                'id':'mobile_phone',
+                                                                'name':'mobile_phone',
+                                                                'type':'text'}))
 
   birth_date = forms.DateField(label='Nascimento', required=True,
-                                    error_messages={'required': 'Campo obrigatório.'},
-                                    widget=forms.widgets.DateInput(format="%m/%d/%Y", 
-                                    attrs={'placeholder': 'dia/mês/ano', 
-                                                          'class':'form-control',
-                                                          'id':'birth_date',
-                                                          'name':'birth_date',
-                                                          'type':'text'}))
+                                error_messages={'required': 'Campo obrigatório.'},
+                                widget=forms.widgets.DateInput(format="%m/%d/%Y", 
+                                attrs={'placeholder': 'dia/mês/ano', 
+                                       'class':'form-control',
+                                       'id':'birth_date',
+                                       'name':'birth_date',
+                                       'type':'text'}))
 
   description_person = forms.CharField(label='Descrição',
-                                error_messages={'required': 'Campo obrigatório.'}, 
-                                max_length=200, required = True, 
-                                widget=forms.Textarea(attrs={'placeholder': 'Descrição', 
+                                        error_messages={'required': 'Campo obrigatório.'}, 
+                                        max_length=200, required = True, 
+                                        widget=forms.Textarea(attrs={'placeholder': 'Descrição', 
                                                               'class':'form-control',
                                                               'id':'description_person',
                                                               'name':'description_person',
@@ -106,10 +106,10 @@ class FormsPeopleEvaluation(forms.Form):
                                                     choices=number))
 
   python = forms.CharField(error_messages={'required': 'Campo obrigatório.'}, 
-                         label='python',required=True,
-                         widget=forms.Select(attrs={'class':'form-control', 
-                                                    'name':'python', 'id':'python'}, 
-                                                    choices=number))
+                          label='python',required=True,
+                          widget=forms.Select(attrs={'class':'form-control', 
+                                                      'name':'python', 'id':'python'}, 
+                                                      choices=number))
 
   css = forms.CharField(error_messages={'required': 'Campo obrigatório.'}, 
                          label='css',required=True,
@@ -142,21 +142,21 @@ class FormsPeopleEvaluation(forms.Form):
                                                       choices=number))
 
   description_items = forms.CharField(label='Descrição',
-                                error_messages={'required': 'Campo obrigatório.'}, 
-                                max_length=200, required = True, 
-                                widget=forms.Textarea(attrs={'placeholder': 'Descrição', 
-                                                              'class':'form-control',
-                                                              'id':'description_items',
-                                                              'name':'description_items',
-                                                              'type':'text',
-                                                              'rows':'2'}))
+                                      error_messages={'required': 'Campo obrigatório.'}, 
+                                      max_length=200, required = True, 
+                                      widget=forms.Textarea(attrs={'placeholder': 'Descrição', 
+                                                                    'class':'form-control',
+                                                                    'id':'description_items',
+                                                                    'name':'description_items',
+                                                                    'type':'text',
+                                                                    'rows':'2'}))
 
   send = forms.BooleanField(required=False, 
-                                widget=forms.TextInput(attrs={'value': 'Enviar', 
-                                                              'class':'btn btn-lg btn-success btn-block',
-                                                              'id':'send',
-                                                              'name':'send',
-                                                              'type':'submit'}))
+                            widget=forms.TextInput(attrs={'value': 'Enviar', 
+                                                          'class':'btn btn-lg btn-success btn-block',
+                                                          'id':'send',
+                                                          'name':'send',
+                                                          'type':'submit'}))
 
   reset = forms.BooleanField(required=False,
                               widget=forms.TextInput(attrs={'value': 'Limpar', 
