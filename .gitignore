@@ -1,0 +1,7 @@
+*.tmp
+*.pyc
+*.swp
+*.sqlite
+*.tmp
+*.log
+evaluation/evaluation/settings_productions.py
