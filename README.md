@@ -4,11 +4,13 @@ Aplicação muito simples, para avaliar um candidato a vaga de programador, entr
 
 ***
 
-## Setup
+### Rodando o projeto
 
-***
+
 ```
-obs: Para funcionar corretamente o envio de email, altere a configuração do "settings.py" de acordo com seu servidor de email, eg: google, postfix, sendmail etc...
+obs: Para funcionar corretamente o envio de email, altere a configuração do 
+	 "settings.py" de acordo com seu servidor de email, eg: google, postfix, 
+	 sendmail etc...
 ```
    
     EMAIL_HOST = 'server email' 
