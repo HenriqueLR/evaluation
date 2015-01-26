@@ -42,7 +42,7 @@ class PeopleAdmin(admin.ModelAdmin):
     listing the fields of model people, in admin application.
     '''
     
-    list_display = ['id_people','first_name','last_name','email','date_created','display_candidature','display_evaluation']
+    list_display = ['id_people','first_name','last_name','email','date_created','get_candidature']
     search_fields = ['first_name','last_name','email','date_created']
     list_filter = ['date_created']
     admin_order_field = ['id_people']

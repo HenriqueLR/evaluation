@@ -102,15 +102,11 @@ class People(models.Model):
 	def __unicode__(self):
 		return u'%s' % self.id_people
 
-	def display_candidature(self):
-		return ', '.join([ candidature.id_jobs for candidature in self.candidature.all() ])
-	display_candidature.short_description = 'candidature'
-	display_candidature.allow_tags = True
+    def get_candidature(self):
+        return "\n".join([p.name for p in self.candidature.all()])
 
-	def display_evaluation(self):
-		return ', '.join([ evaluation.id_item for evaluation in self.evaluation.all() ])
-	display_evaluation.short_description = 'evaluation'
-	display_evaluation.allow_tags = True
+    def get_evaluation(self):
+        return "\n".join([p.id_items for p in self.evaluation.all()])
 
 	class Meta:
 		verbose_name=u'People'
