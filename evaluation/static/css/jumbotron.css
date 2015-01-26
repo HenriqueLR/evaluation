@@ -1,0 +1,87 @@
+/* Move down content because we have a fixed navbar that is 50px tall */
+.jumbotron{
+	background-color:#559BF6;
+	color:white;
+}
+
+body {
+  padding-bottom: 20px;
+}
+
+img{
+	height: 80px;
+	margin-top:20px;
+}
+
+footer img{
+	height: 30px;
+	margin-top:-10px;
+}
+
+footer{
+  color:#559BF6;
+}
+
+.row{
+	margin-top: 10px;
+}
+
+.btn-default{
+  background-color: #559BF6;
+  color:white; 
+}
+
+.btn-default:focus {
+  background-color: #559BF6;
+  color:white;
+}
+.btn-default:hover {
+  background-color: white;
+  color:#559BF6;
+}
+.btn-default:active {
+  background-color: white;
+  color:#559BF6;
+}
+
+
+.btn-success{
+  background-color: #559BF6;
+  color:white;
+  border: normal;
+  border-color: #559BF6;
+}
+
+.btn-success:focus {
+  background-color: #559BF6;
+  color:white;
+  border: normal;
+  border-color: #559BF6;
+}
+
+.btn-success:hover {
+  background-color: white;
+  color:#559BF6;
+  border: normal;
+  border-color: #559BF6;
+}
+
+.btn-success:active {
+  background-color: #559BF6;
+  color:white;
+  border: normal;
+  border-color: #559BF6;
+}
+
+
+.col-md-4{
+	color:#A39892;
+}
+
+.form-horizontal{
+	color:#A39892;	
+}
+
+.text-danger{
+	color:#559BF6;
+}
