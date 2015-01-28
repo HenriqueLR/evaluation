@@ -102,11 +102,11 @@ class People(models.Model):
 	def __unicode__(self):
 		return u'%s' % self.id_people
 
-    def get_candidature(self):
-        return "\n".join([p.name for p in self.candidature.all()])
+    	def get_candidature(self):
+        	return "\n".join([p.name for p in self.candidature.all()])
 
-    def get_evaluation(self):
-        return "\n".join([p.id_items for p in self.evaluation.all()])
+    	def get_evaluation(self):
+        	return "\n".join([p.id_items for p in self.evaluation.all()])
 
 	class Meta:
 		verbose_name=u'People'

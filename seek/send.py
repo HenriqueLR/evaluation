@@ -50,7 +50,7 @@ class PerfilEmail(object):
 
 	def send(self, template):
 		try:
-			subject, from_email, to = 'Avaliação', settings.EMAIL_HOST_USER, str(self.people.email).split(',')
+			subject, from_email, to = 'Avaliação', settings.EMAIL_HOST_USER, self.people.email.split(',')
 			email=EmailMultiAlternatives(subject, 'meus_pedidos', from_email, to)
 			email.attach_alternative(template, "text/html")
 			return email.send()
