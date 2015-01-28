@@ -9,7 +9,7 @@ from django.shortcuts import render, get_object_or_404
 from django.contrib import messages
 from core.models import Jobs
 from forms import FormsPeopleEvaluation
-from send import PerfilEmail
+from send import ProfileEmail
 
 
 
@@ -24,10 +24,10 @@ def detail_jobs(request, *args, **kwargs):
 
 		if form.is_valid():
 			people = form.save()	
-			perfil_email = PerfilEmail(people)
-			send = perfil_email.email_template(perfil_email.check_perfil())
+			profile_email = ProfileEmail(people)
+			send = profile_email.email_template(profile_email.check_profile())
 
-			if perfil_email.send(send):
+			if profile_email.send(send):
 				messages.success(request, 'Obrigado pelo interesse, enviamos um email para você.')
 			else:
 				messages.error(request, 'Ocorreu um erro, tente denovo.')

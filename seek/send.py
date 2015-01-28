@@ -13,7 +13,7 @@ from django.core.mail import EmailMultiAlternatives
 
 
 
-class PerfilEmail(object):
+class ProfileEmail(object):
 
 	'''
 	This class creates a profile object, to send email accordance 
@@ -25,7 +25,7 @@ class PerfilEmail(object):
 		self.list_perfil = []
 		self.context = {}
 
-	def check_perfil(self):
+	def check_profile(self):
 		evaluation = Items.objects.get(people__id_people=self.people.id_people)
 		
 		html,css,js = evaluation.html, evaluation.css, evaluation.js

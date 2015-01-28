@@ -9,7 +9,7 @@ from django.test import TestCase
 from django.core.urlresolvers import reverse
 from core.models import Jobs, Items, People
 from django.core import mail
-from seek.send import PerfilEmail
+from seek.send import ProfileEmail
 
 
 
@@ -216,20 +216,20 @@ class TestSend(TestCase):
         self.people.evaluation.add(self.item)
         self.people.candidature.add(self.job)
 
-        self.perfil_email = PerfilEmail(self.people)
+        self.profile_email = ProfileEmail(self.people)
 
         self.subject = 'Teste'
         self.from_mail = 'henrique.lr89@gmail.com'
         self.to_mail = 'henrique.lr89@gmail.com'
         self.msg = 'Teste'
 
-    def test_list_perfil_none(self):
+    def test_list_profile_none(self):
         '''
         Case profile email none alternatives.
         '''
-        self.assertFalse(self.perfil_email.check_perfil())
+        self.assertFalse(self.profile_email.check_profile())
 
-    def test_list_perfil_front(self):
+    def test_list_profile_front(self):
         '''
         Case profile email front-end developer.
         '''
@@ -239,9 +239,9 @@ class TestSend(TestCase):
                     ios=1,js=7,
                     django=1, description='evaluation')
 
-        self.assertEquals(self.perfil_email.check_perfil(), ['front'])
+        self.assertEquals(self.profile_email.check_profile(), ['front'])
 
-    def test_list_perfil_back(self):
+    def test_list_profile_back(self):
         '''
         Case profile email back-end developer.
         '''
@@ -251,9 +251,9 @@ class TestSend(TestCase):
                     ios=1,js=1,
                     django=7, description='evaluation')
 
-        self.assertEquals(self.perfil_email.check_perfil(), ['back'])
+        self.assertEquals(self.profile_email.check_profile(), ['back'])
 
-    def test_list_perfil_mobile(self):
+    def test_list_profile_mobile(self):
         '''
         Case profile email mobile developer.
         '''
@@ -263,9 +263,9 @@ class TestSend(TestCase):
                     ios=7,js=1,
                     django=1, description='evaluation')
 
-        self.assertEquals(self.perfil_email.check_perfil(), ['mobile'])
+        self.assertEquals(self.profile_email.check_profile(), ['mobile'])
 
-    def test_list_perfil_all(self):
+    def test_list_profile_all(self):
         '''
         Case profile email all options developer.
         '''
@@ -275,13 +275,13 @@ class TestSend(TestCase):
                     ios=7,js=7,
                     django=7, description='evaluation')
 
-        self.assertEquals(self.perfil_email.check_perfil(), ['front','back','mobile'])
+        self.assertEquals(self.profile_email.check_profile(), ['front','back','mobile'])
 
     def test_template_mail_none(self):
         '''
         Case email template none profile developer.
         '''
-        self.assertTrue(self.perfil_email.email_template(self.perfil_email.check_perfil()))
+        self.assertTrue(self.profile_email.email_template(self.profile_email.check_profile()))
 
     def test_template_mail_front(self):
         '''
@@ -293,7 +293,7 @@ class TestSend(TestCase):
                     ios=1,js=7,
                     django=1, description='evaluation')
 
-        self.assertTrue(self.perfil_email.email_template(self.perfil_email.check_perfil()))
+        self.assertTrue(self.profile_email.email_template(self.profile_email.check_profile()))
 
     def test_template_mail_back(self):
         '''
@@ -305,7 +305,7 @@ class TestSend(TestCase):
                     ios=1,js=1,
                     django=7, description='evaluation')
         
-        self.assertTrue(self.perfil_email.email_template(self.perfil_email.check_perfil()))
+        self.assertTrue(self.profile_email.email_template(self.profile_email.check_profile()))
 
     def test_template_mail_mobile(self):
         '''
@@ -317,7 +317,7 @@ class TestSend(TestCase):
                     ios=7,js=1,
                     django=1, description='evaluation')
         
-        self.assertTrue(self.perfil_email.email_template(self.perfil_email.check_perfil()))
+        self.assertTrue(self.profile_email.email_template(self.profile_email.check_profile()))
 
     def test_template_mail_all(self):
         '''
@@ -329,15 +329,15 @@ class TestSend(TestCase):
                     ios=7,js=1,
                     django=1, description='evaluation')
         
-        self.assertTrue(self.perfil_email.email_template(self.perfil_email.check_perfil()))
+        self.assertTrue(self.profile_email.email_template(self.profile_email.check_profile()))
 
 
     def test_send(self):
         '''
         Testing function to send email
         '''
-        self.assertTrue(self.perfil_email.send(self.perfil_email\
-                        .email_template(self.perfil_email.check_perfil())))
+        self.assertTrue(self.profile_email.send(self.profile_email\
+                        .email_template(self.profile_email.check_profile())))
 
     def tearDown(self): 
         del self.item
