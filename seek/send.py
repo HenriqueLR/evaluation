@@ -44,11 +44,17 @@ class ProfileEmail(object):
 		return self.list_perfil
 
 	def email_template(self, perfil):
+		'''
+		Created template for check profile.
+		'''
 		for person in perfil:
 			self.context[str(person)] = True
 		return get_template('email.html').render(Context(self.context))
 
 	def send(self, template):
+		'''
+		Send email with profile.
+		'''
 		try:
 			subject, from_email, to = 'Avaliação', settings.EMAIL_HOST_USER, self.people.email.split(',')
 			email=EmailMultiAlternatives(subject, 'meus_pedidos', from_email, to)

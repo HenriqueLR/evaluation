@@ -14,10 +14,16 @@ from send import ProfileEmail
 
 
 def list_jobs(request):
+    '''
+    Lists the jobs opportunity for evaluation.
+    '''
 	list_jobs = Jobs.jobs(True)
 	return render(request, 'home.html', {'list_jobs':list_jobs})
 
 def detail_jobs(request, *args, **kwargs):
+	'''
+	Post items for avaluation, check profile and send email.
+	'''
 	list_jobs = get_object_or_404(Jobs, pk=kwargs.get('pk'))
 	if request.method == 'POST':
 		form = FormsPeopleEvaluation(request.POST, instance=list_jobs)
