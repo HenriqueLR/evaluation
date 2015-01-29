@@ -14,9 +14,9 @@ from send import ProfileEmail
 
 
 def list_jobs(request):
-    '''
-    Lists the jobs opportunity for evaluation.
-    '''
+	'''
+	Lists the jobs opportunity for evaluation.
+	'''
 	list_jobs = Jobs.jobs(True)
 	return render(request, 'home.html', {'list_jobs':list_jobs})
 

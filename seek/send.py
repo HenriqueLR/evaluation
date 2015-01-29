@@ -26,6 +26,9 @@ class ProfileEmail(object):
 		self.context = {}
 
 	def check_profile(self):
+		'''
+		Set profile email people.
+		'''
 		evaluation = Items.objects.get(people__id_people=self.people.id_people)
 		
 		html,css,js = evaluation.html, evaluation.css, evaluation.js
