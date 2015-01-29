@@ -1,15 +1,16 @@
 <!doctype html>
 <html lang="en">
 	<head>
-  </head>
+  	</head>
 	<body>
-    <h1>Obrigado.</h1>
+		<h1>Obrigado.</h1>
 		{% if mible or front or back %}
-      <p>Obrigado por se candidatar, assim que tivermos uma vaga disponível para<br/> 
-      programador{% if mobile %} - mobile{% endif %}{% if front %} - front-end{% endif %}{% if back %} - back-end{% endif %} entraremos em contato.</p>
-    {% else %}
-      <p>Obrigado por se candidatar, assim que tivermos<br/> 
-        uma vaga disponível entraremos em contato.</p>
-    {% endif %}
-  </body>
+      			<p>Obrigado por se candidatar, assim que tivermos uma vaga disponível para<br/> 
+      		   	programador{% if mobile %} - mobile{% endif %}{% if front %} - front-end{% endif %}{% if back %} - 
+		   	back-end{% endif %} entraremos em contato.</p>
+		{% else %}
+			<p>Obrigado por se candidatar, assim que tivermos<br/> 
+		   	uma vaga disponível entraremos em contato.</p>
+		{% endif %}
+  	</body>
 </html>
