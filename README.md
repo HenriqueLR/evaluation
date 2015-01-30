@@ -38,9 +38,3 @@ obs: Banco de dados usado, para teste é o sqlite3, mas você pode facilmente co
 ###Pronto para testar.
     
             python manage.py runserver
-
-
-#####Projeto encontra-se também hospedado no endereço: 
-
-* http://186.233.134.6
-

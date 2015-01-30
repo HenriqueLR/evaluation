@@ -60,7 +60,7 @@ class ProfileEmail(object):
 		'''
 		try:
 			subject, from_email, to = 'Avaliação', settings.EMAIL_HOST_USER, self.people.email.split(',')
-			email=EmailMultiAlternatives(subject, 'meus_pedidos', from_email, to)
+			email=EmailMultiAlternatives(subject,from_email, to)
 			email.attach_alternative(template, "text/html")
 			return email.send()
 		except:
