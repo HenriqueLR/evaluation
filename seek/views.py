@@ -22,7 +22,7 @@ def list_jobs(request):
 
 def detail_jobs(request, *args, **kwargs):
 	'''
-	Post items for avaluation, check profile and send email.
+	Post items for evaluation, check profile and send email.
 	'''
 	list_jobs = get_object_or_404(Jobs, pk=kwargs.get('pk'))
 	if request.method == 'POST':
