@@ -33,8 +33,8 @@ Outra alteranativa, é testar o envio de emails localmente, para isso basta desc
 * #####lembretes:
 obs: Banco de dados usado, para teste é o sqlite3, mas você pode facilmente configurar outro, como no arquivo de produção "settings_productions.py"
     
-    	python manage.py syncdb
+    	make database
     
 ###Pronto para testar.
     
-            python manage.py runserver
+            make run
